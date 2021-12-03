@@ -13,5 +13,5 @@ This repo is for my UCSD bioinformatics class.
 - [**Class 10. Halloween Candy Analysis**](https://github.com/shdlm33/BGGN213/blob/main/class10_halloween/class10_halloween_git.md)
 - [**Class 11. Introduction to PDB and Bio3D**](https://github.com/shdlm33/BGGN213/blob/main/class11/class11_git.md)
 - [**Class 12. Structural Bioinformatics II**](https://github.com/shdlm33/BGGN213/blob/main/class12/class12_git.md)
-- [**Class 15. DESEQ2**](https://github.com/shdlm33/BGGN213/blob/main/class15/class15_git.md)
+- [**Class 15. DESEQ2 Analysis and Pathway Analysis**](https://github.com/shdlm33/BGGN213/blob/main/class15/class15_git.md)
 - ?? COVID-19 Vaccination Rates

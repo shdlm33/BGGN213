@@ -1,0 +1,97 @@
+---
+title: "class11.Rmd"
+output: github_document
+---
+
+# 1: Introduction to the RCSB Protein Data Bank (PDB)
+
+PDB Statistics
+
+**Overview of the data**
+
+```{r}
+data <- read.csv("Data_Export_Summary.csv", row.names = 1)
+```
+
+> Q1: What percentage of structures in the PDB are solved by X-Ray and Electron Microscopy.
+
+**X-ray 87.53% and EM 4.95%**
+
+```{r}
+round((sum(data$"X.ray") / sum(data$"Total")) * 100, 2)
+round((sum(data$"EM") / sum(data$"Total")) * 100, 2)
+```
+
+**For every column:**
+
+```{r}
+round((colSums(data) / sum(data$Total)) * 100, 2)
+```
+
+> Q2: What proportion of structures in the PDB are protein?
+
+**87.4%**
+
+```{r}
+# To extract the column and select that value in the row:
+data$Total[1]
+```
+
+```{r}
+round((data$Total[1] / sum(data$Total)) * 100, 2)
+```
+
+> Q3: Type HIV in the PDB website search box on the home page and determine how many HIV-1 protease structures are in the current PDB?
+
+**23409**
+
+> Q4: Water molecules normally have 3 atoms. Why do we see just one atom per water molecule in this structure?
+
+**We don't see the hydrogen atoms, only the oxygen one, because the resolution is 1.9 Armstrong**
+
+> Q5: There is a conserved water molecule in the binding site. Can you identify this water molecule? What residue number does this water molecule have?
+
+**HOH308:0**
+
+![](myvmdpic.png)
+
+# 3. Introduction to Bio3D in R
+
+**Using Bio3D in R for structure bioinformatics**
+
+```{r}
+library(bio3d)
+
+pdb <- read.pdb("1hel")
+pdb
+```
+```{r}
+head(pdb$atom)
+```
+
+```{r}
+# Normal mode analysis (nma)
+# Do a Normal Mode Analysis (NMA): a prediction of the conformational variability and intrinsic dynamics of this protein.
+m <- nma(pdb)
+plot(m)
+```
+
+```{r}
+# Make a little movie (trajectory) for viewing in VMD
+mktrj(m, file="nma.pdb")
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

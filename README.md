@@ -15,4 +15,4 @@ This repo is for my UCSD bioinformatics class.
 - [**Class 12. Structural Bioinformatics II**](https://github.com/shdlm33/BGGN213/blob/main/class12/class12_git.md)
 - [**Class 15. DESEQ2 Analysis and Pathway Analysis**](https://github.com/shdlm33/BGGN213/blob/main/class15/class15_git.md)
 - [**Class 16. Differential Gene Expression Analysis**](https://github.com/shdlm33/BGGN213/blob/main/class16/class16_git.md)
-- ?? COVID-19 Vaccination Rates
+- [**Class 17. COVID-19 Vaccination Rates**](https://github.com/shdlm33/BGGN213/blob/main/class17/class17_git.md)
